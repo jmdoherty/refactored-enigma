@@ -1,0 +1,13 @@
+# docker-compose.yml for development purposes
+
+version: "3"
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - REDIS_HOST=redis
+
+  redis:
+    image: "redis:alpine"
