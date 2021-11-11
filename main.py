@@ -34,7 +34,7 @@ def read(name: str, method: str = 'normal', number: int = 10):
 @app.post('/{name}/{method}/{number}', response_class=PlainTextResponse)
 @app.post('/{name}', response_class=PlainTextResponse)
 def read_item(name: str, method: str = 'normal', number: int = 10):
-    $ Increment value of name in redis
+    # Increment value of name in redis
     value = backend.incr(name)
     
     # Use up some resources 
