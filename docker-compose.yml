@@ -1,4 +1,4 @@
-# docker-compose.yml for development purposes
+# docker-compose.yml to start app and a redis server
 
 version: "3"
 services:
