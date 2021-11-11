@@ -8,6 +8,11 @@ services:
       - "8000:8000"
     environment:
       - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_PASS=!!!redis!!
 
   redis:
     image: "redis:alpine"
+    command: redis-server --requirepass "!!!redis!!"
+    ports:
+     - "6379:6379"
