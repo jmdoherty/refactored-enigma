@@ -5,8 +5,8 @@ from fastapi.responses import PlainTextResponse
 from random import randint
 from time import sleep
 
-backend = redis.Redis(host=os.environ.get('REDIS_HOST', 'localhost'),
-                      port=int(os.environ.get('REDIS_PORT', '6379')),
+backend = redis.Redis(host=os.environ.get('REDIS_SERVICE_HOST', 'localhost'),
+                      port=int(os.environ.get('REDIS_SERVICE_PORT', '6379')),
                       password=os.environ.get('REDIS_PASS', None))
 
 MEGA=1024*1024
